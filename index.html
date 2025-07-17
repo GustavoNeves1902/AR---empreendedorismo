@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Corredor A - Realidade Aumentada</title>
+    <title>Corredor A - RA com seta</title>
     <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.2/aframe/build/aframe-ar.min.js"></script>
     <style>
@@ -11,15 +11,61 @@
 
   <body>
     <a-scene embedded arjs>
-      <!-- Usando o marcador padrão HIRO -->
-      <a-marker preset="hiro">
-        <a-image 
-          src="assets/BLOCO12.jpeg"
-          position="0 0 0"
-          rotation="-90 0 0"
-          width="1"
-          height="2">
-        </a-image>
+      <a-assets>
+        <!-- Carregando modelo da seta -->
+        <a-asset-item id="seta" src="assets/Arrow.glb"></a-asset-item>
+      </a-assets>
+
+      <!-- Marcador HIRO -->
+      <a-marker id="marker" preset="hiro">
+
+        <!-- Agrupamento que será escalado -->
+        <a-entity id="grupo-dinamico" scale="1 1 1">
+
+          <!-- Imagem do corredor -->
+          <a-image 
+            src="assets/BLOCO12.jpeg"
+            position="0 0 0"
+            rotation="-90 0 0"
+            width="2"
+            height="4">
+          </a-image>
+
+          <!-- Textos -->
+          <a-text value="Corredor B\nEngenharia Civil" 
+                  position="-0.6 0.3 0.5" 
+                  rotation="-90 0 0"
+                  align="center"
+                  color="#00FF00"
+                  width="1.5">
+          </a-text>
+
+          <a-text value="Corredor C\nArquitetura" 
+                  position="0.6 0.3 0.5" 
+                  rotation="-90 0 0"
+                  align="center"
+                  color="#00FF00"
+                  width="1.5">
+          </a-text>
+
+          <!-- Seta apontando para Corredor B -->
+          <a-entity 
+            gltf-model="#seta" 
+            position="-0.6 0 0.3" 
+            rotation="0 0 0" 
+            scale="2 2 2">
+          </a-entity>
+
+          <!-- Seta apontando para Corredor C -->
+          <a-entity 
+            gltf-model="#seta" 
+            position="0.6 0 0.3" 
+            rotation="0 0 0" 
+            scale="2 2 2">
+          </a-entity>
+
+        </a-entity>
+
       </a-marker>
 
       <a-entity camera></a-entity>
