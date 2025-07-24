@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Corredor A - RA com seta</title>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.2/aframe/build/aframe-ar.min.js"></script>
+    <style>
+      body { margin: 0; overflow: hidden; }
+    </style>
+  </head>
+
+  <body>
+    <a-scene embedded arjs>
+
+      <!-- Marcador HIRO -->
+      <a-marker id="marker" preset="hiro">
+
+        <!-- Agrupamento que será escalado -->
+        <a-entity id="grupo-dinamico" scale="1 1 1">
+
+          <!-- Imagem do corredor -->
+          <a-image 
+            src="assets/b12_com_seta.jpg"
+            position="0 0 0"
+            rotation="-90 0 0"
+            width="2"
+            height="4">
+          </a-image>
+
+          <!-- Textos -->
+           <!--position X Z Y-->
+          <a-text value="Espaco 3" 
+                  position="-0.5 0.01 0.5" 
+                  rotation="-90 0 0"
+                  align="center"
+                  color="#00FF00"
+                  width="2">
+          </a-text>
+
+          <a-text value="Espacos 1 e 2" 
+                  position="0 0.01 1" 
+                  rotation="-90 0 0"
+                  align="center"
+                  color="#00FF00"
+                  width="2">
+          </a-text>
+
+          <a-text value="Espaco 4" 
+                  position="0.5 0.01 0.5" 
+                  rotation="-90 0 0"
+                  align="center"
+                  color="#00FF00"
+                  width="2">
+          </a-text>
+          
+
+        </a-entity>
+
+      </a-marker>
+
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>

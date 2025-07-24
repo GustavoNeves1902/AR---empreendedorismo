@@ -1,64 +1,25 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Corredor A - RA com seta</title>
-    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js@3.4.2/aframe/build/aframe-ar.min.js"></script>
-    <style>
-      body { margin: 0; overflow: hidden; }
-    </style>
-  </head>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Pagina inicial</title>
 
-  <body>
-    <a-scene embedded arjs>
 
-      <!-- Marcador HIRO -->
-      <a-marker id="marker" preset="hiro">
-
-        <!-- Agrupamento que será escalado -->
-        <a-entity id="grupo-dinamico" scale="1 1 1">
-
-          <!-- Imagem do corredor -->
-          <a-image 
-            src="assets/b12_com_seta.jpg"
-            position="0 0 0"
-            rotation="-90 0 0"
-            width="2"
-            height="4">
-          </a-image>
-
-          <!-- Textos -->
-           <!--position X Z Y-->
-          <a-text value="Espaco 3" 
-                  position="-0.5 0.01 0.5" 
-                  rotation="-90 0 0"
-                  align="center"
-                  color="#00FF00"
-                  width="2">
-          </a-text>
-
-          <a-text value="Espacos 1 e 2" 
-                  position="0 0.01 1" 
-                  rotation="-90 0 0"
-                  align="center"
-                  color="#00FF00"
-                  width="2">
-          </a-text>
-
-          <a-text value="Espaco 4" 
-                  position="0.5 0.01 0.5" 
-                  rotation="-90 0 0"
-                  align="center"
-                  color="#00FF00"
-                  width="2">
-          </a-text>
-          
-
-        </a-entity>
-
-      </a-marker>
-
-      <a-entity camera></a-entity>
-    </a-scene>
-  </body>
+</head>
+<body>
+  <header></header>
+  <main>
+    <h1 class="titulo_principal">ESCOLHA O ESPAÇO DESEJADO:</h1>
+    <div class="botoes">
+      <a class="ancora" href="espacoaberto.html">CORREDOR PRINCIPAL</a>
+      <a class="ancora" href="espaco1.html">CORREDOR 1</a>
+      <a class="ancora" href="espaco2.html">CORREDOR 2</a>
+      <a class="ancora" href="espaco3.html">CORREDOR 3</a>
+      <a class="ancora" href="espaco4.html">CORREDOR 4</a>
+    </div>
+  </main>
+  
+</body>
 </html>
