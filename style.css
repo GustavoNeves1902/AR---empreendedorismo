@@ -39,6 +39,13 @@ main{
     gap: 10px;
     justify-content: center;
 }
+.info_salas{
+    color: #000;
+    font-size: 24px;
+    padding: 10px;
+    text-align: center;
+    background-color: #f6f6f6;
+}
 .ancora{
     color:black;
     background-color: aqua;
