@@ -6,8 +6,13 @@
 body{
     background-color: black;
     height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
+.img_onibus{
+    height: 90%;
+}
 main{
     height: 100%;
     display: flex;
